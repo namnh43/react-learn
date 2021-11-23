@@ -1,7 +1,9 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import 'antd/dist/antd.css';
-import App from './hook/movies/index';
+ //import App from './hook/movies/index';
+//import App from './basic/App';
+import App from './movies/index';
 import reportWebVitals from './reportWebVitals';
 
 ReactDOM.render(
