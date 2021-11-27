@@ -1,4 +1,6 @@
 import axios from 'axios';
+import jwt from 'jsonwebtoken';
+import { LOGIN_KEY } from '../helpers/constant';
 
 //Khong su dung asyn-await
 // const loginUser = (user, passw) => {
@@ -16,6 +18,21 @@ import axios from 'axios';
 //     return response;
 // }
 
+//fake api - dong vai tro nhu la 1 ben phia BE
+const loginUserFakes = (user, pass) => {
+    let token = null;
+    if (user === 'admin' && pass==='123') {
+        // ma hoa thong tin tra ve
+        token = jwt.sign({
+            id: 1,
+            user: user,
+            email: "admin@example.com",
+            phone: '123456789',
+            address: 'Ha noi'
+        }, LOGIN_KEY);
+    }
+    return token;
+}
 
 const loginUser = async (user, passw) => {
     const url = `https://reqres.in/api/login`;
@@ -38,5 +55,6 @@ const loginUser = async (user, passw) => {
     
 }
 export const apiUser = {
-    loginUser
+    loginUser,
+    loginUserFakes
 }

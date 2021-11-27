@@ -55,7 +55,7 @@ const SearchMovies = () => {
     return (
         <LayoutMovies>
             <Row>
-                <Col span={24}>
+                <Col span={12}>
                 <Search
                     placeholder="name of movies ..."
                     allowClear

@@ -1,4 +1,4 @@
-import React, { memo } from "react";
+import React from "react";
 import HeaderMovie from './partials/Header';
 import FooterMovie from './partials/Footer';
 import './styles/layout.css';
